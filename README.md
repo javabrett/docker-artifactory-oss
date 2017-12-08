@@ -4,7 +4,7 @@ Simple deployment of [JFrog Artifactory OSS](https://www.jfrog.com/open-source/#
 
 This image is based on [openjdk:8-alpine](https://hub.docker.com/_/openjdk/), Tomcat (currently 8.5) running on OpenJDK 8.
 
-## Pull
+Consider using the [offical JFrog Artifactory Docker image](docker.bintray.io/jfrog/artifactory-oss), `docker pull docker.bintray.io/jfrog/artifactory-oss:latest`. 
 
 ## Run
 
@@ -13,7 +13,8 @@ docker run -d -p 8081:8081 \
   --volume artifactory-data:/artifactory/data \
   --volume artifactory-logs:/artifactory/logs \
   --volume artifactory-backup:/artifactory/backup \
-  --name artifactory artifactory
+  --name artifactory-oss \
+  javabrett/artifactory-oss
 ```
 
 ## Access
